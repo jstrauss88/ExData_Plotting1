@@ -1,6 +1,6 @@
 plot4<-function(){
   library(datasets)
-  png(file = "plot4.png", height = 480, width = 480)
+  png(file = "plot4.PNG", height = 480, width = 480)
   Energy<-read.table("household_power_consumption.txt",header=TRUE,sep=";",colClasses=c("character","character","character","character","character","character","character","character","character"))
   subEnergy<-Energy[Energy$Date=="1/2/2007"|Energy$Date=="2/2/2007",]
   DateTime=strptime(paste(subEnergy$Date,subEnergy$Time),format="%d/%m/%Y %H:%M:%S")
